@@ -49,7 +49,7 @@ def transpose_node:
 	
 	output = create_output("out", "note message type")
 	
-	def handler(message: message.Polyphonic):
+	def handler(message):
 		transposed_message = message.note += transpose
 		output(transposed_message)
 	
