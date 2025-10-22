@@ -50,7 +50,7 @@ def transpose_node:
 	output = create_output("out", "note message type")
 	
 	def handler(message):
-		transposed_message = message.note += transpose
+		transposed_message = message.transpose(state["transpose"])
 		output(transposed_message)
 	
 	return {
